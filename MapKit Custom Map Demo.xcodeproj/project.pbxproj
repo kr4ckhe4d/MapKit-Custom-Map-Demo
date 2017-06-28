@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		D74040311F035106001913DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74040301F035106001913DC /* AppDelegate.swift */; };
-		D74040331F035106001913DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74040321F035106001913DC /* ViewController.swift */; };
 		D74040361F035106001913DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74040341F035106001913DC /* Main.storyboard */; };
 		D74040381F035106001913DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74040371F035106001913DC /* Assets.xcassets */; };
 		D740403B1F035106001913DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74040391F035106001913DC /* LaunchScreen.storyboard */; };
+		D740404B1F03519C001913DC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D740404A1F03519C001913DC /* MapKit.framework */; };
+		D740404E1F03648F001913DC /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D740404D1F03648F001913DC /* ButtonCollectionViewCell.swift */; };
+		D74040501F03653B001913DC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D740404F1F03653B001913DC /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D740402D1F035106001913DC /* MapKit Custom Map Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MapKit Custom Map Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74040301F035106001913DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D74040321F035106001913DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D74040351F035106001913DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D74040371F035106001913DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D740403A1F035106001913DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D740403C1F035106001913DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D740404A1F03519C001913DC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D740404D1F03648F001913DC /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		D740404F1F03653B001913DC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D740404B1F03519C001913DC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				D740402F1F035106001913DC /* MapKit Custom Map Demo */,
 				D740402E1F035106001913DC /* Products */,
+				D74040491F03519C001913DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +60,87 @@
 		D740402F1F035106001913DC /* MapKit Custom Map Demo */ = {
 			isa = PBXGroup;
 			children = (
+				D740404C1F03643F001913DC /* Cells */,
+				D74040481F03516E001913DC /* Controllers */,
+				D74040471F035155001913DC /* Storyboards */,
+				D74040461F03514F001913DC /* Annotations */,
+				D74040451F035144001913DC /* Overlays */,
+				D74040441F03513D001913DC /* Models */,
+				D74040431F03512D001913DC /* Place Information */,
+				D74040421F035123001913DC /* Images */,
 				D74040301F035106001913DC /* AppDelegate.swift */,
-				D74040321F035106001913DC /* ViewController.swift */,
-				D74040341F035106001913DC /* Main.storyboard */,
-				D74040371F035106001913DC /* Assets.xcassets */,
-				D74040391F035106001913DC /* LaunchScreen.storyboard */,
 				D740403C1F035106001913DC /* Info.plist */,
 			);
 			path = "MapKit Custom Map Demo";
+			sourceTree = "<group>";
+		};
+		D74040421F035123001913DC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D74040371F035106001913DC /* Assets.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		D74040431F03512D001913DC /* Place Information */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Place Information";
+			sourceTree = "<group>";
+		};
+		D74040441F03513D001913DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D74040451F035144001913DC /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Overlays;
+			sourceTree = "<group>";
+		};
+		D74040461F03514F001913DC /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Annotations;
+			sourceTree = "<group>";
+		};
+		D74040471F035155001913DC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D74040341F035106001913DC /* Main.storyboard */,
+				D74040391F035106001913DC /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D74040481F03516E001913DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D740404F1F03653B001913DC /* MapViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D74040491F03519C001913DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D740404A1F03519C001913DC /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D740404C1F03643F001913DC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D740404D1F03648F001913DC /* ButtonCollectionViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D74040331F035106001913DC /* ViewController.swift in Sources */,
+				D740404E1F03648F001913DC /* ButtonCollectionViewCell.swift in Sources */,
+				D74040501F03653B001913DC /* MapViewController.swift in Sources */,
 				D74040311F035106001913DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
