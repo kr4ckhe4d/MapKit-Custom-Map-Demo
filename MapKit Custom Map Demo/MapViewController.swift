@@ -7,33 +7,36 @@
 //
 
 import UIKit
+import MapKit
+
+enum MapOptionsType: Int {
+    case MapBoundary = 0
+    case MapOverlay
+    case MapPins
+    case MapCharacterLocation
+    case MapRoute
+}
 
 class MapViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var mapView: MKMapView!
+    
+    let mapOptionsTypes = ["MapBoundary","MapOverlay","MapPins","MapCharacterLocation","MapRoute"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.45)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     final func buttonTapped(sender: UIButton){
         print("Clicked: \(sender.tag)")
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -43,12 +46,12 @@ extension MapViewController : UICollectionViewDelegate,UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return mapOptionsTypes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "buttonCell", for: indexPath) as! ButtonCollectionViewCell
-        cell.cellButton.setTitle("\(indexPath.row)", for: .normal)
+        cell.cellButton.setTitle("\(mapOptionsTypes[indexPath.row])", for: .normal)
         cell.cellButton.layer.cornerRadius = cell.cellButton.frame.size.height/2
         cell.cellButton.tag = indexPath.row
         cell.cellButton.addTarget(self, action: #selector(buttonTapped), for: UIControlEvents.touchUpInside)
