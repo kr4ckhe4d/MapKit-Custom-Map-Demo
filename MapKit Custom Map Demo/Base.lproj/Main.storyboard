@@ -49,9 +49,9 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djX-AI-URu" customClass="CustomAnnotationButton" customModule="MapKit_Custom_Map_Demo" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title=" ">
-                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -94,7 +94,7 @@
                                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                                <state key="normal" title="Clear"/>
+                                                <state key="normal" title="Show Map"/>
                                                 <connections>
                                                     <action selector="loadOverlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aig-LO-ndD"/>
                                                 </connections>

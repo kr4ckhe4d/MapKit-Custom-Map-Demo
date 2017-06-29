@@ -35,7 +35,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.45)
+        collectionView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
 
         let latDelta = place.overlayTopLeftCoordinate.latitude - place.overlayBottomRightCoordinate.latitude
         
@@ -48,10 +48,21 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func loadOverlay(_ sender: Any) {
-        let mapOptionsType = MapOptionsType(rawValue: 1)
-        selectedOptions += [mapOptionsType!]
-        print(selectedOptions)
-        self.loadSelectedOptions()
+        let button = sender as! UIButton
+        if (button.tag == 0){
+            button.tag = 1
+            let mapOptionsType = MapOptionsType(rawValue: 1)
+            selectedOptions += [mapOptionsType!]
+            print(selectedOptions)
+            self.loadSelectedOptions()
+            button.setTitle("Hide Map", for: .normal)
+        }else{
+            button.tag = 0
+            mapView.removeAnnotations(mapView.annotations)
+            mapView.removeOverlays(mapView.overlays)
+            button.setTitle("Show Map", for: .normal)
+        }
+
     }
     
     func loadSelectedOptions() {
@@ -89,6 +100,14 @@ class MapViewController: UIViewController {
     
     final func buttonTapped(sender: UIButton){
         print("Clicked: \(sender.tag)")
+        let button = sender as! CustomAnnotationButton
+        print(button.isChosen)
+        if (button.isChosen) {
+            button.deselect()
+        }else{
+            button.setSelected()
+        }
+        
     }
 
 }
@@ -106,9 +125,7 @@ extension MapViewController : UICollectionViewDelegate,UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "buttonCell", for: indexPath) as! ButtonCollectionViewCell
-//        cell.cellButton.setTitle("\(annotationOptionsTypes[indexPath.row])", for: .normal)
         cell.cellButton.setImage(UIImage(named: annotationOptionsTypes[indexPath.row]), for: .normal)
-
         cell.cellButton.tag = indexPath.row
         cell.cellButton.addTarget(self, action: #selector(buttonTapped), for: UIControlEvents.touchUpInside)
         return cell
