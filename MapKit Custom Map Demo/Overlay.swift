@@ -1,11 +1,11 @@
 //
 //  Overlay.swift
-//  Park View
+//  MapKit Custom Map Demo
 //
 //  A MKOverlay is how you tell MapKit where you want the overlays drawn.
 //
 //  Created by Nipuna's MacMini on 6/27/17.
-//  Copyright © 2017 Chris Wagner. All rights reserved.
+//  Copyright © 2017 Nipuna H Herath. All rights reserved.
 //
 
 import Foundation

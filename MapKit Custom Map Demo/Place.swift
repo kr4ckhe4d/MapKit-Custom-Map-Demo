@@ -1,9 +1,9 @@
 //
 //  Place.swift
-//  Place View
+//  MapKit Custom Map Demo
 //
 //  Created by Nipuna's MacMini on 6/28/17.
-//  Copyright © 2017 Chris Wagner. All rights reserved.
+//  Copyright © 2017 Nipuna H Herath. All rights reserved.
 //
 
 import Foundation
