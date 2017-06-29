@@ -14,6 +14,13 @@
 		D740404B1F03519C001913DC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D740404A1F03519C001913DC /* MapKit.framework */; };
 		D740404E1F03648F001913DC /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D740404D1F03648F001913DC /* ButtonCollectionViewCell.swift */; };
 		D74040501F03653B001913DC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D740404F1F03653B001913DC /* MapViewController.swift */; };
+		D74040521F03BD37001913DC /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74040511F03BD37001913DC /* Place.swift */; };
+		D74040541F03BD7D001913DC /* MagicMountain.plist in Resources */ = {isa = PBXBuildFile; fileRef = D74040531F03BD7D001913DC /* MagicMountain.plist */; };
+		D74040561F03BDAE001913DC /* KeenEye.plist in Resources */ = {isa = PBXBuildFile; fileRef = D74040551F03BDAE001913DC /* KeenEye.plist */; };
+		D74040601F03C9B9001913DC /* Overlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D740405F1F03C9B9001913DC /* Overlay.swift */; };
+		D74040621F03CB33001913DC /* PlaceMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74040611F03CB33001913DC /* PlaceMapOverlay.swift */; };
+		D74040651F04A0F6001913DC /* overlay_park.png in Resources */ = {isa = PBXBuildFile; fileRef = D74040631F04A0F6001913DC /* overlay_park.png */; };
+		D74040661F04A0F6001913DC /* overlay_park@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74040641F04A0F6001913DC /* overlay_park@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		D740404A1F03519C001913DC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D740404D1F03648F001913DC /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		D740404F1F03653B001913DC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D74040511F03BD37001913DC /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		D74040531F03BD7D001913DC /* MagicMountain.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MagicMountain.plist; sourceTree = "<group>"; };
+		D74040551F03BDAE001913DC /* KeenEye.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = KeenEye.plist; sourceTree = "<group>"; };
+		D740405F1F03C9B9001913DC /* Overlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Overlay.swift; sourceTree = "<group>"; };
+		D74040611F03CB33001913DC /* PlaceMapOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMapOverlay.swift; sourceTree = "<group>"; };
+		D74040631F04A0F6001913DC /* overlay_park.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_park.png; sourceTree = "<group>"; };
+		D74040641F04A0F6001913DC /* overlay_park@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overlay_park@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,8 @@
 		D74040421F035123001913DC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D74040631F04A0F6001913DC /* overlay_park.png */,
+				D74040641F04A0F6001913DC /* overlay_park@2x.png */,
 				D74040371F035106001913DC /* Assets.xcassets */,
 			);
 			name = Images;
@@ -85,6 +101,8 @@
 		D74040431F03512D001913DC /* Place Information */ = {
 			isa = PBXGroup;
 			children = (
+				D74040531F03BD7D001913DC /* MagicMountain.plist */,
+				D74040551F03BDAE001913DC /* KeenEye.plist */,
 			);
 			name = "Place Information";
 			sourceTree = "<group>";
@@ -92,6 +110,7 @@
 		D74040441F03513D001913DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D74040511F03BD37001913DC /* Place.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -99,6 +118,8 @@
 		D74040451F035144001913DC /* Overlays */ = {
 			isa = PBXGroup;
 			children = (
+				D740405F1F03C9B9001913DC /* Overlay.swift */,
+				D74040611F03CB33001913DC /* PlaceMapOverlay.swift */,
 			);
 			name = Overlays;
 			sourceTree = "<group>";
@@ -202,7 +223,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74040651F04A0F6001913DC /* overlay_park.png in Resources */,
 				D740403B1F035106001913DC /* LaunchScreen.storyboard in Resources */,
+				D74040561F03BDAE001913DC /* KeenEye.plist in Resources */,
+				D74040661F04A0F6001913DC /* overlay_park@2x.png in Resources */,
+				D74040541F03BD7D001913DC /* MagicMountain.plist in Resources */,
 				D74040381F035106001913DC /* Assets.xcassets in Resources */,
 				D74040361F035106001913DC /* Main.storyboard in Resources */,
 			);
@@ -217,7 +242,10 @@
 			files = (
 				D740404E1F03648F001913DC /* ButtonCollectionViewCell.swift in Sources */,
 				D74040501F03653B001913DC /* MapViewController.swift in Sources */,
+				D74040601F03C9B9001913DC /* Overlay.swift in Sources */,
+				D74040621F03CB33001913DC /* PlaceMapOverlay.swift in Sources */,
 				D74040311F035106001913DC /* AppDelegate.swift in Sources */,
+				D74040521F03BD37001913DC /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

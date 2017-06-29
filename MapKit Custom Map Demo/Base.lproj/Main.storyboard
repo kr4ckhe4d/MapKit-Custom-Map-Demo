@@ -82,6 +82,9 @@
                                                 <rect key="frame" x="16" y="7" width="84" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Switch Type"/>
+                                                <connections>
+                                                    <action selector="mapTypeChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T1F-nj-eHI"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="nc6-km-brc">
@@ -89,6 +92,9 @@
                                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="loadOverlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aig-LO-ndD"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
