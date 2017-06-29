@@ -21,6 +21,7 @@
 		D74040621F03CB33001913DC /* PlaceMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74040611F03CB33001913DC /* PlaceMapOverlay.swift */; };
 		D74040651F04A0F6001913DC /* overlay_park.png in Resources */ = {isa = PBXBuildFile; fileRef = D74040631F04A0F6001913DC /* overlay_park.png */; };
 		D74040661F04A0F6001913DC /* overlay_park@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74040641F04A0F6001913DC /* overlay_park@2x.png */; };
+		D74040681F04BC11001913DC /* CustomAnnotationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74040671F04BC11001913DC /* CustomAnnotationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D74040611F03CB33001913DC /* PlaceMapOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMapOverlay.swift; sourceTree = "<group>"; };
 		D74040631F04A0F6001913DC /* overlay_park.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_park.png; sourceTree = "<group>"; };
 		D74040641F04A0F6001913DC /* overlay_park@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overlay_park@2x.png"; sourceTree = "<group>"; };
+		D74040671F04BC11001913DC /* CustomAnnotationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D740404D1F03648F001913DC /* ButtonCollectionViewCell.swift */,
+				D74040671F04BC11001913DC /* CustomAnnotationButton.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74040681F04BC11001913DC /* CustomAnnotationButton.swift in Sources */,
 				D740404E1F03648F001913DC /* ButtonCollectionViewCell.swift in Sources */,
 				D74040501F03653B001913DC /* MapViewController.swift in Sources */,
 				D74040601F03C9B9001913DC /* Overlay.swift in Sources */,
