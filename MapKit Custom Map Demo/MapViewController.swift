@@ -28,9 +28,10 @@ class MapViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var mapView: MKMapView!
     
-    var selectedOptions = [MapOptionsType]()
+    // Retrieve custom map latitude/ longitude info from the .plist file.
     var place = Place(filename: "MagicMountain")
     
+    // Bottom bar button annotation types. These will be retrieved from backend.
     let annotationOptionsTypes = ["first-aid","food","info","toilet","shop","stage","lost","first-aid","food","info","toilet","shop","stage","lost"]
     
     override func viewDidLoad() {
@@ -38,23 +39,28 @@ class MapViewController: UIViewController {
         collectionView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.65)
 
         let latDelta = place.overlayTopLeftCoordinate.latitude - place.overlayBottomRightCoordinate.latitude
-        
-        // Get distance from one corner to the opposite corner.
+        // Get distance from one corner to the opposite corner(Diagonal distance).
         let span = MKCoordinateSpanMake(fabs(latDelta), 0.0)
-        
         let region = MKCoordinateRegionMake(place.midCoordinate, span)
-        mapView.region = region
-
+        mapView.region = region // Focus the map to the custom map area when the map is loaded.
     }
     
+    // MARK - addOverlay
+    func addOverlay(){
+        // Remove any existing annotations/ overlays to prevent duplicates.
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.removeOverlays(mapView.overlays)
+        
+        let overlay = PlaceMapOverlay(place: place)
+        mapView.add(overlay)
+    }
+    
+    // MARK - Button Actions
     @IBAction func loadOverlay(_ sender: Any) {
         let button = sender as! UIButton
         if (button.tag == 0){
             button.tag = 1
-            let mapOptionsType = MapOptionsType(rawValue: 1)
-            selectedOptions += [mapOptionsType!]
-            print(selectedOptions)
-            self.loadSelectedOptions()
+            addOverlay()
             button.setTitle("Hide Map", for: .normal)
         }else{
             button.tag = 0
@@ -65,20 +71,7 @@ class MapViewController: UIViewController {
 
     }
     
-    func loadSelectedOptions() {
-        mapView.removeAnnotations(mapView.annotations)
-        mapView.removeOverlays(mapView.overlays)
-        
-        for option in selectedOptions {
-            switch (option) {
-            case .MapOverlay:
-                addOverlay()
-            default:
-                break
-            }
-        }
-    }
-    
+    // Switch map layout types to hybrid, satellite and standard
     @IBAction func mapTypeChanged(_ sender: AnyObject) {
         let mapType = mapView.mapType
         switch (mapType) {
@@ -91,11 +84,6 @@ class MapViewController: UIViewController {
         default:
             mapView.mapType = .standard
         }
-    }
-    
-    func addOverlay(){
-        let overlay = PlaceMapOverlay(place: place)
-        mapView.add(overlay)
     }
     
     final func buttonTapped(sender: UIButton){
@@ -115,6 +103,7 @@ class MapViewController: UIViewController {
 
 // MARK - Delegate Implementation
 extension MapViewController : UICollectionViewDelegate,UICollectionViewDataSource, MKMapViewDelegate{
+    // MARK - CollectionView Delegates
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
