@@ -27,12 +27,14 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var mapView: MKMapView!
+    var currentlySelectedAnnotationIndex: Int = -1
+    
     
     // Retrieve custom map latitude/ longitude info from the .plist file.
     var place = Place(filename: "MagicMountain")
     
     // Bottom bar button annotation types. These will be retrieved from backend.
-    let annotationOptionsTypes = ["first-aid","food","info","toilet","shop","stage","lost","first-aid","food","info","toilet","shop","stage","lost"]
+    let annotationOptionsTypes = ["first-aid","foods","info","toilet","shop","stage","lost","first-aid","foods","info","toilet","shop","stage","lost"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,32 @@ class MapViewController: UIViewController {
         
         let overlay = PlaceMapOverlay(place: place)
         mapView.add(overlay)
+    }
+    
+    func addAttractionPins(annotationType: Int) {
+        let filePath = Bundle.main.path(forResource: "MagicMountainAttractions", ofType: "plist")
+        var attractions = [NSDictionary]()
+        let attractions1 = NSArray(contentsOfFile: filePath!)
+        
+        for attraction in attractions1! {
+            attractions.append(attraction as! NSDictionary)
+        }
+        
+        for attraction in attractions {
+            let typeRawValue = Int((attraction["type"] as! String))
+            
+            if (typeRawValue == annotationType) {
+                let point = CGPointFromString(attraction["location"] as! String)
+                let coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(point.x), CLLocationDegrees(point.y))
+                let title = attraction["name"] as! String
+                
+                let type = AttractionType(rawValue: typeRawValue!)!
+                let subtitle = attraction["subtitle"] as! String
+                let annotation = AttractionAnnotation(coordinate: coordinate, title: title, subtitle: subtitle, type: type)
+                
+                mapView.addAnnotation(annotation)
+            }
+        }
     }
     
     // MARK - Button Actions
@@ -87,17 +115,27 @@ class MapViewController: UIViewController {
     }
     
     final func buttonTapped(sender: UIButton){
+        // Remove any existing annotations/ overlays to prevent duplicates.
+        mapView.removeAnnotations(mapView.annotations)
+        
+        if (currentlySelectedAnnotationIndex >= 0){
+            let indexPath = IndexPath(row: currentlySelectedAnnotationIndex, section: 0)
+            let cell = collectionView.cellForItem(at: indexPath) as! ButtonCollectionViewCell
+            let button = cell.cellButton as! CustomAnnotationButton
+            button.deselect()
+        }
+        
         print("Clicked: \(sender.tag)")
         let button = sender as! CustomAnnotationButton
         print(button.isChosen)
-        if (button.isChosen) {
+        if (button.isChosen == true) {
             button.deselect()
         }else{
             button.setSelected()
+            currentlySelectedAnnotationIndex = sender.tag
+            addAttractionPins(annotationType: sender.tag + 1)
         }
-        
     }
-
 }
 
 
@@ -120,19 +158,6 @@ extension MapViewController : UICollectionViewDelegate,UICollectionViewDataSourc
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let cell = collectionView.cellForItem(at: indexPath)
-//        let mapOptionsType = MapOptionsType(rawValue: indexPath.row)
-//        if (cell?.tag == 1) {
-//            cell!.tag = 0
-//            // delete object
-//            selectedOptions = selectedOptions.filter { (currentOption) in currentOption != mapOptionsType}
-//        } else {
-//            cell!.tag = 1
-//            selectedOptions += [mapOptionsType!]
-//        }
-    }
-    
     // MARK - Map View Delegate
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is PlaceMapOverlay{
@@ -142,5 +167,12 @@ extension MapViewController : UICollectionViewDelegate,UICollectionViewDataSourc
             return overlayView
         }
         return MKOverlayRenderer()
+    }
+    
+    // Annotations Delegate
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = AttractionAnnotationView(annotation: annotation, reuseIdentifier: "Attraction")
+        annotationView.canShowCallout = true
+        return annotationView
     }
 }

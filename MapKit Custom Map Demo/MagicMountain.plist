@@ -22,5 +22,88 @@
             <string>{34.42557,-118.59289}</string>
             <string>{34.42739,-118.59171}</string>
         </array>
+        <key>Annotations</key>
+        <array>
+            <dict>
+                <key>name</key>
+                <string>First Aid 1</string>
+                <key>location</key>
+                <string>{34.42635,-118.59712}</string>
+                <key>type</key>
+                <string>1</string>
+                <key>subtitle</key>
+                <string>Intensity: 8/10</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>First Aid 2</string>
+                <key>location</key>
+                <string>{34.42581,-118.60089}</string>
+                <key>type</key>
+                <string>1</string>
+                <key>subtitle</key>
+                <string>Intensity: 6/10</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>First Aid 3</string>
+                <key>location</key>
+                <string>{34.42430,-118.60074}</string>
+                <key>type</key>
+                <string>1</string>
+                <key>subtitle</key>
+                <string>Intensity: 6/10</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>First Aid 4</string>
+                <key>location</key>
+                <string>{34.42156,-118.59556}</string>
+                <key>type</key>
+                <string>1</string>
+                <key>subtitle</key>
+                <string>Intensity: 10/10</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>First Aid 5</string>
+                <key>location</key>
+                <string>{34.42150,-118.59741}</string>
+                <key>type</key>
+                <string>1</string>
+                <key>subtitle</key>
+                <string>Intensity: 7/10</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Food Outlet 1</string>
+                <key>location</key>
+                <string>{34.42126,-118.595637}</string>
+                <key>type</key>
+                <string>2</string>
+                <key>subtitle</key>
+                <string>Cost: $$</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Food Outlet 2</string>
+                <key>location</key>
+                <string>{34.42401,-118.59495}</string>
+                <key>type</key>
+                <string>2</string>
+                <key>subtitle</key>
+                <string>Cost: $</string>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>First Aid</string>
+                <key>location</key>
+                <string>{34.42640,-118.59918}</string>
+                <key>type</key>
+                <string>3</string>
+                <key>subtitle</key>
+                <string>Call 911 For Emergency</string>
+            </dict>
+        </array>
     </dict>
 </plist>

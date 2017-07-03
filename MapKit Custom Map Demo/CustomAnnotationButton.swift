@@ -18,7 +18,7 @@ class CustomAnnotationButton: UIButton {
         self.layer.borderColor = UIColor.gray.cgColor
         self.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
         self.layer.masksToBounds = true
-        isChosen = false
+//        isChosen = false
     }
     
     func setSelected() {
@@ -26,12 +26,12 @@ class CustomAnnotationButton: UIButton {
         backgroundColor = UIColor.gray
         tintColor = UIColor.white
     }
+    
     func deselect() {
         isChosen = false
         backgroundColor = UIColor.clear
         tintColor = UIColor.gray
     }
-    
 
 //    override var isHighlighted: Bool{
 //        didSet{

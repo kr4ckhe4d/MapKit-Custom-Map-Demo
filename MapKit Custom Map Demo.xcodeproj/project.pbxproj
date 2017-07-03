@@ -22,6 +22,17 @@
 		D74040651F04A0F6001913DC /* overlay_park.png in Resources */ = {isa = PBXBuildFile; fileRef = D74040631F04A0F6001913DC /* overlay_park.png */; };
 		D74040661F04A0F6001913DC /* overlay_park@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74040641F04A0F6001913DC /* overlay_park@2x.png */; };
 		D74040681F04BC11001913DC /* CustomAnnotationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74040671F04BC11001913DC /* CustomAnnotationButton.swift */; };
+		D75AB2D11F0A23530056711C /* AttractionAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75AB2D01F0A23530056711C /* AttractionAnnotation.swift */; };
+		D75AB2D31F0A249D0056711C /* AttractionAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75AB2D21F0A249D0056711C /* AttractionAnnotationView.swift */; };
+		D75AB2DC1F0A26930056711C /* firstaid.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2D41F0A26930056711C /* firstaid.png */; };
+		D75AB2DD1F0A26930056711C /* firstaid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2D51F0A26930056711C /* firstaid@2x.png */; };
+		D75AB2DE1F0A26930056711C /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2D61F0A26930056711C /* food.png */; };
+		D75AB2DF1F0A26930056711C /* food@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2D71F0A26930056711C /* food@2x.png */; };
+		D75AB2E01F0A26930056711C /* ride.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2D81F0A26930056711C /* ride.png */; };
+		D75AB2E11F0A26930056711C /* ride@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2D91F0A26930056711C /* ride@2x.png */; };
+		D75AB2E21F0A26930056711C /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2DA1F0A26930056711C /* star.png */; };
+		D75AB2E31F0A26930056711C /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2DB1F0A26930056711C /* star@2x.png */; };
+		D75AB2E51F0A28AB0056711C /* MagicMountainAttractions.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2E41F0A28AB0056711C /* MagicMountainAttractions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +53,17 @@
 		D74040631F04A0F6001913DC /* overlay_park.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_park.png; sourceTree = "<group>"; };
 		D74040641F04A0F6001913DC /* overlay_park@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "overlay_park@2x.png"; sourceTree = "<group>"; };
 		D74040671F04BC11001913DC /* CustomAnnotationButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationButton.swift; sourceTree = "<group>"; };
+		D75AB2D01F0A23530056711C /* AttractionAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionAnnotation.swift; sourceTree = "<group>"; };
+		D75AB2D21F0A249D0056711C /* AttractionAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionAnnotationView.swift; sourceTree = "<group>"; };
+		D75AB2D41F0A26930056711C /* firstaid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstaid.png; sourceTree = "<group>"; };
+		D75AB2D51F0A26930056711C /* firstaid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "firstaid@2x.png"; sourceTree = "<group>"; };
+		D75AB2D61F0A26930056711C /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		D75AB2D71F0A26930056711C /* food@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "food@2x.png"; sourceTree = "<group>"; };
+		D75AB2D81F0A26930056711C /* ride.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ride.png; sourceTree = "<group>"; };
+		D75AB2D91F0A26930056711C /* ride@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ride@2x.png"; sourceTree = "<group>"; };
+		D75AB2DA1F0A26930056711C /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		D75AB2DB1F0A26930056711C /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		D75AB2E41F0A28AB0056711C /* MagicMountainAttractions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MagicMountainAttractions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +115,14 @@
 		D74040421F035123001913DC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D75AB2D41F0A26930056711C /* firstaid.png */,
+				D75AB2D51F0A26930056711C /* firstaid@2x.png */,
+				D75AB2D61F0A26930056711C /* food.png */,
+				D75AB2D71F0A26930056711C /* food@2x.png */,
+				D75AB2D81F0A26930056711C /* ride.png */,
+				D75AB2D91F0A26930056711C /* ride@2x.png */,
+				D75AB2DA1F0A26930056711C /* star.png */,
+				D75AB2DB1F0A26930056711C /* star@2x.png */,
 				D74040631F04A0F6001913DC /* overlay_park.png */,
 				D74040641F04A0F6001913DC /* overlay_park@2x.png */,
 				D74040371F035106001913DC /* Assets.xcassets */,
@@ -103,6 +133,7 @@
 		D74040431F03512D001913DC /* Place Information */ = {
 			isa = PBXGroup;
 			children = (
+				D75AB2E41F0A28AB0056711C /* MagicMountainAttractions.plist */,
 				D74040531F03BD7D001913DC /* MagicMountain.plist */,
 				D74040551F03BDAE001913DC /* KeenEye.plist */,
 			);
@@ -129,6 +160,8 @@
 		D74040461F03514F001913DC /* Annotations */ = {
 			isa = PBXGroup;
 			children = (
+				D75AB2D01F0A23530056711C /* AttractionAnnotation.swift */,
+				D75AB2D21F0A249D0056711C /* AttractionAnnotationView.swift */,
 			);
 			name = Annotations;
 			sourceTree = "<group>";
@@ -226,13 +259,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75AB2E51F0A28AB0056711C /* MagicMountainAttractions.plist in Resources */,
 				D74040651F04A0F6001913DC /* overlay_park.png in Resources */,
+				D75AB2DF1F0A26930056711C /* food@2x.png in Resources */,
+				D75AB2DE1F0A26930056711C /* food.png in Resources */,
 				D740403B1F035106001913DC /* LaunchScreen.storyboard in Resources */,
 				D74040561F03BDAE001913DC /* KeenEye.plist in Resources */,
 				D74040661F04A0F6001913DC /* overlay_park@2x.png in Resources */,
+				D75AB2E31F0A26930056711C /* star@2x.png in Resources */,
 				D74040541F03BD7D001913DC /* MagicMountain.plist in Resources */,
+				D75AB2DC1F0A26930056711C /* firstaid.png in Resources */,
 				D74040381F035106001913DC /* Assets.xcassets in Resources */,
+				D75AB2E11F0A26930056711C /* ride@2x.png in Resources */,
 				D74040361F035106001913DC /* Main.storyboard in Resources */,
+				D75AB2E21F0A26930056711C /* star.png in Resources */,
+				D75AB2DD1F0A26930056711C /* firstaid@2x.png in Resources */,
+				D75AB2E01F0A26930056711C /* ride.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,9 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D74040681F04BC11001913DC /* CustomAnnotationButton.swift in Sources */,
+				D75AB2D11F0A23530056711C /* AttractionAnnotation.swift in Sources */,
 				D740404E1F03648F001913DC /* ButtonCollectionViewCell.swift in Sources */,
 				D74040501F03653B001913DC /* MapViewController.swift in Sources */,
 				D74040601F03C9B9001913DC /* Overlay.swift in Sources */,
+				D75AB2D31F0A249D0056711C /* AttractionAnnotationView.swift in Sources */,
 				D74040621F03CB33001913DC /* PlaceMapOverlay.swift in Sources */,
 				D74040311F035106001913DC /* AppDelegate.swift in Sources */,
 				D74040521F03BD37001913DC /* Place.swift in Sources */,
@@ -413,6 +457,7 @@
 				D74040411F035106001913DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
