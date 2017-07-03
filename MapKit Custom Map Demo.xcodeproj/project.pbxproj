@@ -32,7 +32,6 @@
 		D75AB2E11F0A26930056711C /* ride@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2D91F0A26930056711C /* ride@2x.png */; };
 		D75AB2E21F0A26930056711C /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2DA1F0A26930056711C /* star.png */; };
 		D75AB2E31F0A26930056711C /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2DB1F0A26930056711C /* star@2x.png */; };
-		D75AB2E51F0A28AB0056711C /* MagicMountainAttractions.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75AB2E41F0A28AB0056711C /* MagicMountainAttractions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +62,6 @@
 		D75AB2D91F0A26930056711C /* ride@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ride@2x.png"; sourceTree = "<group>"; };
 		D75AB2DA1F0A26930056711C /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		D75AB2DB1F0A26930056711C /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
-		D75AB2E41F0A28AB0056711C /* MagicMountainAttractions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MagicMountainAttractions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +131,6 @@
 		D74040431F03512D001913DC /* Place Information */ = {
 			isa = PBXGroup;
 			children = (
-				D75AB2E41F0A28AB0056711C /* MagicMountainAttractions.plist */,
 				D74040531F03BD7D001913DC /* MagicMountain.plist */,
 				D74040551F03BDAE001913DC /* KeenEye.plist */,
 			);
@@ -259,7 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D75AB2E51F0A28AB0056711C /* MagicMountainAttractions.plist in Resources */,
 				D74040651F04A0F6001913DC /* overlay_park.png in Resources */,
 				D75AB2DF1F0A26930056711C /* food@2x.png in Resources */,
 				D75AB2DE1F0A26930056711C /* food.png in Resources */,

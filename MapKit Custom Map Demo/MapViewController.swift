@@ -58,11 +58,15 @@ class MapViewController: UIViewController {
     }
     
     func addAttractionPins(annotationType: Int) {
-        let filePath = Bundle.main.path(forResource: "MagicMountainAttractions", ofType: "plist")
-        var attractions = [NSDictionary]()
-        let attractions1 = NSArray(contentsOfFile: filePath!)
+        let filePath = Bundle.main.path(forResource: "MagicMountain", ofType: "plist")
+        let fileContent = NSDictionary(contentsOfFile: filePath!)
         
-        for attraction in attractions1! {
+        // Get annotation details from Map Information dictionary
+        let annotations = fileContent?["annotations"] as! NSArray
+        
+        var attractions = [NSDictionary]()
+        
+        for attraction in annotations {
             attractions.append(attraction as! NSDictionary)
         }
         
@@ -77,7 +81,6 @@ class MapViewController: UIViewController {
                 let type = AttractionType(rawValue: typeRawValue!)!
                 let subtitle = attraction["subtitle"] as! String
                 let annotation = AttractionAnnotation(coordinate: coordinate, title: title, subtitle: subtitle, type: type)
-                
                 mapView.addAnnotation(annotation)
             }
         }
@@ -118,7 +121,7 @@ class MapViewController: UIViewController {
         // Remove any existing annotations/ overlays to prevent duplicates.
         mapView.removeAnnotations(mapView.annotations)
         
-        if (currentlySelectedAnnotationIndex >= 0){
+        if (currentlySelectedAnnotationIndex >= 0 && currentlySelectedAnnotationIndex != sender.tag){
             let indexPath = IndexPath(row: currentlySelectedAnnotationIndex, section: 0)
             let cell = collectionView.cellForItem(at: indexPath) as! ButtonCollectionViewCell
             let button = cell.cellButton as! CustomAnnotationButton

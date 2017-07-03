@@ -22,7 +22,7 @@
             <string>{34.42557,-118.59289}</string>
             <string>{34.42739,-118.59171}</string>
         </array>
-        <key>Annotations</key>
+        <key>annotations</key>
         <array>
             <dict>
                 <key>name</key>

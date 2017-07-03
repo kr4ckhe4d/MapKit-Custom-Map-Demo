@@ -15,8 +15,6 @@ enum AttractionType: Int{
     case AttractionFirstAid
     case AttractionFood
     case AttractionRide
-
-    
 }
 class AttractionAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
