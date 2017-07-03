@@ -47,7 +47,7 @@ class MapViewController: UIViewController {
         mapView.region = region // Focus the map to the custom map area when the map is loaded.
     }
     
-    // MARK - addOverlay
+    /// Adds the image overlay provided on to the mapview
     func addOverlay(){
         // Remove any existing annotations/ overlays to prevent duplicates.
         mapView.removeAnnotations(mapView.annotations)
@@ -57,6 +57,10 @@ class MapViewController: UIViewController {
         mapView.add(overlay)
     }
     
+    
+    /// This method will add the pins according to the annotations array retrieved from the map information file.
+    ///
+    /// - Parameter annotationType: Type of the annotation(eg: first-aid, food). Description of the annotation.
     func addAttractionPins(annotationType: Int) {
         let filePath = Bundle.main.path(forResource: "MagicMountain", ofType: "plist")
         let fileContent = NSDictionary(contentsOfFile: filePath!)
@@ -86,7 +90,10 @@ class MapViewController: UIViewController {
         }
     }
     
-    // MARK - Button Actions
+    
+    /// Button action that triggers the addition of the image overlay to the map
+    ///
+    /// - Parameter sender: Tapped UIButton
     @IBAction func loadOverlay(_ sender: Any) {
         let button = sender as! UIButton
         if (button.tag == 0){
@@ -102,7 +109,9 @@ class MapViewController: UIViewController {
 
     }
     
-    // Switch map layout types to hybrid, satellite and standard
+    /// Switch map layout types to hybrid, satellite and standard
+    ///
+    /// - Parameter sender: Tapped UIButton
     @IBAction func mapTypeChanged(_ sender: AnyObject) {
         let mapType = mapView.mapType
         switch (mapType) {
@@ -117,10 +126,17 @@ class MapViewController: UIViewController {
         }
     }
     
+    
+    /// Collection view cell annotation button tap action. This will be called when the user taps on an annotation button in the collection view.
+    ///
+    /// - Parameter sender: Tapped UIButton
     final func buttonTapped(sender: UIButton){
         // Remove any existing annotations/ overlays to prevent duplicates.
         mapView.removeAnnotations(mapView.annotations)
         
+        /*
+         * Check if there is a already selected button in the collection view and deselect it if and only if the previously selected number != newly selected button.
+         */
         if (currentlySelectedAnnotationIndex >= 0 && currentlySelectedAnnotationIndex != sender.tag){
             let indexPath = IndexPath(row: currentlySelectedAnnotationIndex, section: 0)
             let cell = collectionView.cellForItem(at: indexPath) as! ButtonCollectionViewCell
